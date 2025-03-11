@@ -26,11 +26,11 @@ export const Projects = () => {
         
     ];
     return (
-        <section Classname="project" id="project">
+        <section className="project" id="project">
          <Container>
             <Row>
                 <Col>
-                <h2>Projetos</h2>
+                <h2>Projects</h2>
                 <p>AAAAAAAAAAAAAAAAAA MAO DEMONIACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
                 <Tab.Container id="project-tabs" defaultActiveKey="first">
                 <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">

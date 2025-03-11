@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Col, Container, Row } from "react-bootstrap";
-import {ContactImg} from '../assets/img/contact-img.svg'
+import ContactImg from '../assets/img/contact-img.svg'
 
 
 export const Contact = () => {
@@ -48,28 +48,28 @@ export const Contact = () => {
                       <img src={ContactImg} alt="Contate-me por aqui"/>
                     </Col>
                     <Col md={6}>
-                      <h2> Get in Touch</h2>
+                      <h2> Entre em contato comigo!</h2>
                       <form onSubmit={handleSubmit}>
                         <Row>
                             <Col sm = {6} className="px-1">
                             <input 
                             type="text" 
                             value={formDetails.FirstName} 
-                            placeholder="First Name" 
+                            placeholder="Primeiro nome" 
                             onChange={(e)=> onFormUpdate('FirstName', e.target.value)}/>
                             </Col>
                             <Col sm = {6} className="px-1">
                             <input 
                             type="text" 
                             value={formDetails.lastName} 
-                            placeholder="last Name" 
+                            placeholder="Ultimo nome" 
                             onChange={(e)=> onFormUpdate('lastName', e.target.value)}/>
                             </Col>
                             <Col sm = {6} className="px-1">
                             <input 
                             type="email" 
                             value={formDetails.email} 
-                            placeholder="email" 
+                            placeholder="e-mail de contato" 
                             onChange={(e)=> onFormUpdate('email', e.target.value)}/></Col>
                             <Col sm = {6} className="px-1">
                             <input 
