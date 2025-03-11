@@ -6,7 +6,7 @@ import HeaderImage  from '../assets/img/header-img.svg'
 export const Banner = () => {
     const [Loopnum, setLoopnum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ["Web Development", "Front-end", "Back-end"];
+    const toRotate = ["Web development", "Front-end", "Back-end"];
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 50);
     const period = 200;
@@ -43,8 +43,8 @@ export const Banner = () => {
                 <Row className="align-itens-center">
                     <Col xs={12} md={6} xl={7}>
                         <span className="tagline">Bem-vindo ao meu portfolio</span>
-                        <h1>{'Olá sou um desenvolvedor!       '}<span className="wrap">{text}</span></h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla odio nibh, porttitor ultricies felis suscipit et. Aenean lacus massa,</p>
+                        <h1>{'Olá sou um desenvolvedor!  '}<span className="wrap">{text}</span></h1>
+                        <p>SHADOW O OURIÇO E UM TREMENDO FILHO DA PUTA MIJOU NA MINHA ESPOSA</p>
                         <button onClick={() => console.log('connect')}>Vamos nos conectar! < ArrowRightCircle size={25}/></button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
