@@ -48,7 +48,7 @@ export const MyNavbar = () => {
                         <a href='#'><img src={navIcon3} alt="descrição da img"/></a>
                       </div>
                       <button className="botão" onClick={() => console.log ("connect")}><span>
-                        Vamos conectar</span></button>
+                        Vamos conectar!</span></button>
                     </span>
                   </Navbar.Collapse>
                 </Container>
