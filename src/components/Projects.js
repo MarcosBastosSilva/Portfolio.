@@ -33,7 +33,7 @@ export const Projects = () => {
                 <h2>Projetos</h2>
                 <p>AAAAAAAAAAAAAAAAAA MAO DEMONIACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
                 <Tab.Container id="project-tabs" defaultActiveKey="first">
-                <Nav variant="pills" defaultActiveKey="/home">
+                <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                 <Nav.Item>
                     <Nav.Link eventKey="first">Tab one</Nav.Link>
                 </Nav.Item>
@@ -41,7 +41,7 @@ export const Projects = () => {
                     <Nav.Link eventKey="second">Tab two</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="third" disabled>Tab three </Nav.Link>
+                    <Nav.Link eventKey="third">Tab three </Nav.Link>
                 </Nav.Item>
                 </Nav>
                 <Tab.Content>
