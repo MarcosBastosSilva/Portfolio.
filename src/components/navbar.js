@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { useEffect, useState } from 'react';
-import logo from '../assets/img/logo.svg';
+import doge from '../assets/img/doge.webp';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 
 
@@ -19,7 +19,7 @@ export const MyNavbar = () => {
   }, []);
 
   const onUpdateActiveLink = (value, event) => {
-    event.preventDefault(); // Evita o comportamento padrão do link
+    event.preventDefault(); 
     setActiveLink(value);
 
     const section = document.getElementById(value);
@@ -32,7 +32,7 @@ export const MyNavbar = () => {
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
         <Navbar.Brand href="#home">
-          <img src={logo} alt="logo" />
+          <img src={doge} alt="logo" className='Doge' />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className='navbar-toggler-icon'></span>
@@ -43,19 +43,19 @@ export const MyNavbar = () => {
               className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'}
               onClick={(e) => onUpdateActiveLink('home', e)}
             >
-              Home
+              Inicio
             </Nav.Link>
             <Nav.Link href="#skills" 
               className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'}
               onClick={(e) => onUpdateActiveLink('skills', e)}
             >
-              Skills
+              Habilidades
             </Nav.Link>
             <Nav.Link href="#project" 
               className={activeLink === 'project' ? 'active navbar-link' : 'navbar-link'}
               onClick={(e) => onUpdateActiveLink('project', e)}
             >
-              Projects
+              Projetos
             </Nav.Link>
           </Nav>
           <span className='navbar-text'>

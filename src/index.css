@@ -337,7 +337,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-/************ Projeto Css ************/
+
 .project {
   padding: 80px 0;
   position: relative;
@@ -611,4 +611,35 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #B8B8B8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+  padding-top: 10px;
+}
+
+.proj-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ 
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.img-doge {
+  padding: 10px;
+}
+
+
+.Doge {
+  padding: 20px;
+  transition: transform 0.6s ease-in-out;
+}
+
+.Doge:hover {
+  transform: rotate(360deg);
 }

@@ -4,25 +4,27 @@ import { ProjectCard } from "./ProjectCard";
 import colorSharp2 from '../assets/img/color-sharp2.png'
 import projectImage1 from '../assets/img/project-img1.png'
 import projectImage2 from '../assets/img/project-img2.png'
-import projectImage3 from '../assets/img/project-img3.png'
+import work from '../assets/img/work.png'
 
 export const Projects = () => {
     const projects = [
         {
-            title: "bussiness startup",
-            description:"design development",
+            title: "Receitas Web",
+            description:"Desafio tecnico, feito a partir do site: themealdb, executa em vite react e utilizando TailWind.CSS para estilizar",
             imgUrl: projectImage1,
+            link: "https://github.com/MarcosBastosSilva/ReceitasWeb"
         },
         {
-            title: "bussiness startup",
-            description:"design development",
+            title: "API Cervejas",
+            description:"Utilizando Node e Javascript com auxilio do Insonmia e feito uma consulta ao banco de dados sobre determinada cerveja, desde sua marca, teor alcoolico etc.",
             imgUrl: projectImage2,
+            link: "https://github.com/MarcosBastosSilva/Api-Cervejas"
         },
         {
-            title: "bussiness startup",
-            description:"design development",
-            imgUrl: projectImage3,
-        },
+            title: "EM ANDAMENTO!",
+            description:"",
+            imgUrl: work,
+        }, 
         
     ];
     return (
@@ -30,18 +32,18 @@ export const Projects = () => {
          <Container>
             <Row>
                 <Col>
-                <h2>Projects</h2>
-                <p>AAAAAAAAAAAAAAAAAA MAO DEMONIACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+                <h2>Projetos</h2>
+                <p>Aqui você pode conferir um pouco dos meus projetos no qual trabalhei.</p>
                 <Tab.Container id="project-tabs" defaultActiveKey="first">
                 <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                 <Nav.Item>
-                    <Nav.Link eventKey="first">Tab one</Nav.Link>
+                    <Nav.Link eventKey="first">Pagina 1</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="second">Tab two</Nav.Link>
+                    <Nav.Link eventKey="second">Pagina 2</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="third">Tab three </Nav.Link>
+                    <Nav.Link eventKey="third">Pagina 3 </Nav.Link>
                 </Nav.Item>
                 </Nav>
                 <Tab.Content>
@@ -59,8 +61,8 @@ export const Projects = () => {
                             }
                         </Row>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="second">AAAAAAAAAAAAAAAAAAAAAAAAA PINGUIN IMPERIAL</Tab.Pane>
-                    <Tab.Pane eventKey="third">MAOOOOOOOOOO FANTASMAAAAAAAAAAAAAA</Tab.Pane>
+                    <Tab.Pane eventKey="second">Projetos serão acrescentados em breve a está pagina</Tab.Pane>
+                    <Tab.Pane eventKey="third">Projetos serão acrescentados em breve a está pagina</Tab.Pane>
                 </Tab.Content>
                 </Tab.Container>
                 </Col>

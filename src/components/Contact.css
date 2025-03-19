@@ -1,0 +1,14 @@
+.rounded-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px; /* Isso tornará o botão arredondado */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.rounded-button:hover {
+    background-color: #0056b3;
+}
+

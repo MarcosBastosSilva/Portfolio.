@@ -12,7 +12,7 @@ export const Contact = () => {
         message: ''
     }
     const[formDetails, setFormDetails] = useState(FormInitialDetails);
-    const [buttonText, setButtomText] = useState('Send');
+    const [buttonText, setButtomText] = useState('Enviar');
     const [status, setStatus] = useState({})
     const onFormUpdate = (category, value) => {
         setFormDetails({
@@ -75,12 +75,12 @@ export const Contact = () => {
                             <input 
                             type="tel" 
                             value={formDetails.phone} 
-                            placeholder="phone" 
+                            placeholder="telefone" 
                             onChange={(e)=> onFormUpdate('phone', e.target.value)}/></Col>
                             <Col>
                             <textarea rows={6} 
                             value={formDetails.message} 
-                            placeholder="Message" 
+                            placeholder="Mensagem" 
                             onChange={(e)=> onFormUpdate('message', e.target.value)}/>
                             <button type="submit"><span>{buttonText}</span></button>
                             </Col>
