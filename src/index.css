@@ -638,6 +638,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .Doge {
   padding: 20px;
   transition: transform 0.6s ease-in-out;
+  display: grid;
 }
 
 .Doge:hover {

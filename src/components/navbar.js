@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { useEffect, useState } from 'react';
 import doge from '../assets/img/doge.webp';
 import navIcon1 from '../assets/img/nav-icon1.svg';
+import navIcon2 from '../assets/img/nav-icon2.png';
 
 
 export const MyNavbar = () => {
@@ -61,8 +62,9 @@ export const MyNavbar = () => {
           <span className='navbar-text'>
             <div className='social-icon'>
               <a href='https://www.linkedin.com/in/marcosvbs11' target='_blank'><img src={navIcon1} alt="social" /></a>
+              <a href='https://github.com/MarcosBastosSilva' target='_blank'><img src={navIcon2} alt="social" /></a>
             </div>
-            <button className="botão" onClick={() => console.log("connect")}>
+            <button className="botão" onClick={() => window.open ('https://www.linkedin.com/in/marcosvbs11')}>
               <span>Vamos conectar!</span>
             </button>
           </span>
