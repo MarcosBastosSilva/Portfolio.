@@ -24,10 +24,10 @@ export const Contact = () => {
     const handleSubmit =async (e) => {
         e.preventDefault();
         setButtomText('enviando...');
-        let response = await fetch("http://localhost:5000/contact",{
-            meth: "POST",
+        let response = await fetch("http://localhost:3000/contact",{
+            method: "POST",
             headers: {
-                "Content-Type": "Application/json;charset=utf-8",
+                "Content-Type": "Application/json",
             },
             body: JSON.stringify(formDetails),
         });

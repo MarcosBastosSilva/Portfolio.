@@ -12,7 +12,6 @@ export const Footer = () => {
         <Row className="align-items-center">
           <MailChimpForm />
           <Col size={12} sm={6}>
-            <img src={logo} alt="Logo" className="Doge" />
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">
             <p>Feito por Marcos Vinicius - 2025</p>
