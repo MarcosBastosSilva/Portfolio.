@@ -44,4 +44,4 @@ app.post("/contact", async (req, res) => {
 });
 
 
-app.listen(5000, () => console.log("Server Running"));
+app.listen(process.env.PORT, () => console.log("Server Running"));
