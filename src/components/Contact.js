@@ -11,7 +11,7 @@ export const Contact = () => {
         phone: '',
         message: ''
     }
-    const[formDetails, setFormDetails] = useState(FormInitialDetails);
+    const [formDetails, setFormDetails] = useState(FormInitialDetails);
     const [buttonText, setButtomText] = useState('Enviar');
     const [status, setStatus] = useState({})
     const onFormUpdate = (category, value) => {
@@ -21,10 +21,10 @@ export const Contact = () => {
         })
     }
 
-    const handleSubmit =async (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setButtomText('enviando...');
-        let response = await fetch("http://localhost:3000/contact",{
+        let response = await fetch("http://localhost:5000/contact", {
             method: "POST",
             headers: {
                 "Content-Type": "Application/json",
@@ -34,10 +34,10 @@ export const Contact = () => {
         setButtomText("Enviado");
         let result = response.json();
         setFormDetails(FormInitialDetails);
-        if(result.code === 200) {
-            setStatus({sucess: true, menssage: "menssagem enviada com sucesso"})
+        if (result.sucesso) {
+            setStatus({ sucess: true, menssage: "menssagem enviada com sucesso" })
         } else {
-            setStatus({sucess: false, menssage: "menssagem nao enviada com sucesso, tente novamente depois"});
+            setStatus({ sucess: false, menssage: "menssagem nao enviada com sucesso, tente novamente depois" });
         }
     }
     return (
@@ -45,53 +45,54 @@ export const Contact = () => {
             <Container>
                 <Row className="align-items-center">
                     <Col md={6}>
-                      <img src={ContactImg} alt="Contate-me por aqui"/>
+                        <img src={ContactImg} alt="Contate-me por aqui" />
                     </Col>
                     <Col md={6}>
-                      <h2> Entre em contato comigo!</h2>
-                      <form onSubmit={handleSubmit}>
-                        <Row>
-                            <Col sm = {6} className="px-1">
-                            <input 
-                            type="text" 
-                            value={formDetails.FirstName} 
-                            placeholder="Primeiro nome" 
-                            onChange={(e)=> onFormUpdate('FirstName', e.target.value)}/>
-                            </Col>
-                            <Col sm = {6} className="px-1">
-                            <input 
-                            type="text" 
-                            value={formDetails.lastName} 
-                            placeholder="Ultimo nome" 
-                            onChange={(e)=> onFormUpdate('lastName', e.target.value)}/>
-                            </Col>
-                            <Col sm = {6} className="px-1">
-                            <input 
-                            type="email" 
-                            value={formDetails.email} 
-                            placeholder="e-mail de contato" 
-                            onChange={(e)=> onFormUpdate('email', e.target.value)}/></Col>
-                            <Col sm = {6} className="px-1">
-                            <input 
-                            type="tel" 
-                            value={formDetails.phone} 
-                            placeholder="telefone" 
-                            onChange={(e)=> onFormUpdate('phone', e.target.value)}/></Col>
-                            <Col>
-                            <textarea rows={6} 
-                            value={formDetails.message} 
-                            placeholder="Mensagem" 
-                            onChange={(e)=> onFormUpdate('message', e.target.value)}/>
-                            <button type="submit"><span>{buttonText}</span></button>
-                            </Col>
-                            {
-                                status.message && 
-                                <Col>
-                                <p className={status.sucess === false ? "danger" : "sucess"}>{status.message}</p>
+                        <h2> Entre em contato comigo!</h2>
+                        <form onSubmit={handleSubmit}>
+                            <Row>
+                                <Col sm={6} className="px-1">
+                                    <input required
+                                        type="text"
+                                        value={formDetails.FirstName}
+                                        placeholder="Primeiro nome"
+                                        onChange={(e) => onFormUpdate('FirstName', e.target.value)} />
                                 </Col>
-                            }
-                        </Row>
-                      </form>
+                                <Col sm={6} className="px-1">
+                                    <input required
+                                        type="text"
+                                        value={formDetails.lastName}
+                                        placeholder="Ultimo nome"
+                                        onChange={(e) => onFormUpdate('lastName', e.target.value)} />
+                                </Col>
+                                <Col sm={6} className="px-1">
+                                    <input required
+                                        type="email"
+                                        value={formDetails.email}
+                                        placeholder="e-mail de contato"
+                                        onChange={(e) => onFormUpdate('email', e.target.value)} /></Col>
+                                <Col sm={6} className="px-1">
+                                    <input 
+                                        type="tel"
+                                        value={formDetails.phone}
+                                        placeholder="(XX) XXXX-XXXX"
+                                        onChange={(e) => onFormUpdate('phone', e.target.value)} /></Col>
+                                <Col>
+                                    <textarea required rows={6}
+                                        value={formDetails.message}
+                                        placeholder="Deixe sua mensagem em até 250 caracteres"
+                                        input type="text" maxLength={250}
+                                        onChange={(e) => onFormUpdate('message', e.target.value)} />
+                                    <button type="submit"><span>{buttonText}</span></button>
+                                </Col>
+                                {
+                                    status.message &&
+                                    <Col>
+                                        <p className={status.sucess === false ? "danger" : "sucess"}>{status.message}</p>
+                                    </Col>
+                                }
+                            </Row>
+                        </form>
                     </Col>
                 </Row>
             </Container>

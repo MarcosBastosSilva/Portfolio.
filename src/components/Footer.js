@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { MailChimpForm } from './MailChimpForm'
-import logo from "../assets/img/doge.webp";
+
 
 
 
