@@ -26,7 +26,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-   "start": "serve -s build -l $PORT",
     "build": "react-scripts build",
     "start:api":"node server.js",
     "dev:api": "node --env-file=.env server.js",
