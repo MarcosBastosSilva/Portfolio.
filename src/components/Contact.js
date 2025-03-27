@@ -61,9 +61,9 @@ export const Contact = () => {
                                 <Col sm={6} className="px-1">
                                     <input required
                                         type="text"
-                                        value={formDetails.lastName}
+                                        value={formDetails.LastName}
                                         placeholder="Ultimo nome"
-                                        onChange={(e) => onFormUpdate('lastName', e.target.value)} />
+                                        onChange={(e) => onFormUpdate('LastName', e.target.value)} />
                                 </Col>
                                 <Col sm={6} className="px-1">
                                     <input required
