@@ -24,7 +24,7 @@ export const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setButtomText('enviando...');
-        let response = await fetch("http://localhost:5000/contact", {
+        let response = await fetch("https://portfolio-i29m.onrender.com/contact", {
             method: "POST",
             headers: {
                 "Content-Type": "Application/json",
@@ -72,7 +72,7 @@ export const Contact = () => {
                                         placeholder="e-mail de contato"
                                         onChange={(e) => onFormUpdate('email', e.target.value)} /></Col>
                                 <Col sm={6} className="px-1">
-                                    <input 
+                                    <input
                                         type="tel"
                                         value={formDetails.phone}
                                         placeholder="(XX) XXXX-XXXX"
